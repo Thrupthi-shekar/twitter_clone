@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter/home</title>
+    <link rel="stylesheet" href="src/output.css">
+    <!-- this icons get displayed at title of the document of browser -->
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+    <!-- this link is taken from google font icons website -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="bg-black text-white">
+    <!-- divides 3 sections -->
+    <div class="flex md:container mx-auto my-4"> <!--flex aligns row into column and w-full=width full-->
+        <div class="first w-16 md:w-[70%]">
+            <div class="sidebar flex md:items-end flex-col sticky top-0">
+                <!-- sticky at top:0 i.e it sticks to its position while scrolling -->
+                <div class="logo invert my-4 self-start mx-2 md:mx-16">
+                    <!-- my-4= margin in y-axis -->
+                    <!-- invert is used to invert the color of svg logo -->
+                    <!-- this svg logo link is taken from twitter homepage itself by inspect element. now adjust its width in given class (w-8)-->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-8 m-auto r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                        <!-- m-auto=margin-auto==>to align x logo at center -->
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <ul class="flex flex-col text-2xl space-y-3 md:px-11 font-bold w-full">
+                    <!-- text size=xl space along y-axis=3 -->
+                    <!-- gap-4= create gap btw logo and list....flex property is mandatory to use gap -->
+                    <!-- w-fit= this will take the space of the entered text and px=padding along x-axis -->
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900  px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-home-smile-fill gap-3"></i><span class="hidden md:block">Home</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900  px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-search-line"></i><span class="hidden md:block">Explore</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900 px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-notification-2-fill"></i><span class="hidden md:block">Notifications</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900 px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-message-2-fill"></i><span class="hidden md:block">Messages</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900  px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-code-box-line"></i><span class="hidden md:block">Grok</span>
+                        <!-- hidden is used to hide the elements when it hits the md level i.e it works same as display:none -->
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900 px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-file-list-fill"></i><span class="hidden md:block">Lists</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900 px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-user-fill"></i><span class="hidden md:block">Profile</span>
+                    </li>
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-gray-900 px-5 py-3 hover:cursor-pointer hover:rounded-full">
+                        <i class="ri-more-line"></i><span class="hidden md:block">More</span>
+                    </li>
+                    <li>
+                        <button
+                            class="hidden md:block bg-[#1d9bf0] px-20 text-xl rounded-full py-3 text-white">Post</button>
+                        <button class="md:hidden bg-[#1d9bf0] mx-2 px-2 md:px-4 text-xl rounded-full py-1 md:py-3 text-white">
+                            <i class="ri-edit-2-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="userprofile w-full mt-10  justify-end mx-10 hidden md:flex">
+                    <div
+                        class="item p-3 items-center gap-5 justify-center rounded-full w-fit flex mx-5 hover:bg-gray-800 cursor-pointer">
+
+
+                        <div class="p1"><img class="w-12 h-12 rounded-lg"
+                                src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                                alt="vercel"></div>
+                        <div class="p2 ">
+                            <div>Thrupthi r shekar</div>
+                            <div class="text-gray-500">@thrupthi.__</div>
+                        </div>
+
+
+                        <div class="p3">
+                            ...
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second w-full border-[1px] border-x-gray-600 border-y-black">
+            <div class="top flex p-3 sticky top-0 bg-black backdrop-blur-3xl opacity-80">
+                <!-- blurred bg with transparency(opacity) -->
+                <div class="absolute w-16 h-1 rounded-full bg-blue-500 bottom-0 left-[19%] z-10"></div>
+                <div class="left bg-red-3001 w-1/2 flex justify-center font-bold text-lg">For You</div>
+                <div class="right bg-green-3001 w-1/2 flex justify-center font-bold text-lg">Following</div>
+                <div class="settings mx-2"><i class="ri-settings-2-line"></i>
+                </div>
+            </div>
+
+            <div class="h-[1px] w-full bg-gray-600"></div>
+
+            <div class="whatshapp my-3 flex gap-4">
+                <!-- flex gap 4 helps in overflowing of input box -->
+                <div class="img m-2 w-16">
+                    <img src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                        class="rounded-full" alt="">
+                </div>
+                <div class="w-full">
+
+                    <input type="text" placeholder="What's happening?"
+                        class="w-full outline-none bg-black text-white h-7 my-2">
+                    <div class="text-blue-400 flex items-center  gap-3 w-full my-4">
+                        <i class="ri-earth-fill"></i>
+                        <span class="font-bold">Everyone can reply</span>
+                    </div>
+                    <div class="flex justify-between">
+
+                        <div class="flex gap-2 text-blue-400 items-center">
+                            <i class="ri-image-line cursor-pointer"></i>
+                            <i class="ri-file-gif-fill cursor-pointer"></i>
+                            <i class="ri-chat-poll-fill cursor-pointer"></i>
+                            <i class="ri-emoji-sticker-line cursor-pointer"></i>
+                            <i class="ri-calendar-fill cursor-pointer"></i>
+                            <i class="ri-map-pin-fill cursor-pointer"></i>
+                        </div>
+                        <div class="postbtn">
+                            <button
+                                class="bg-[#1d9bf0] px-6 mx-5 text-sm rounded-full py-2 text-white font-bold">Post</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!-- hr gives a row line -->
+            <div class="posts ">
+                <div class="post border-[1px] border-y-gray-600 border-x-0">
+                    <div class="flex">
+                        <div class="img m-4 ">
+                            <img class="w-16 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                                alt="">
+                        </div>
+                        <div class="content my-3">
+                            <span class="font-bold hover:underline text-white">Narendra Modi</span>
+                            <span class="text-gray-600">@narendramodi · 1h</span>
+                            <div>Here are more pictures from today's public meetings across West Bengal. The BJP is
+                                committed towards ensuring people-centric governance.</div>
+                            <div class="posting mx-2 ml-0">
+                                <img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GMqIolbXQAEjbJD?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="icons flex justify-between mx-4 my-4 text-sm text-gray-600 ">
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-chat-1-line"></i>1k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-repeat-line"></i>900</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bar-chart-fill"></i></i>2k</div>
+                                <div class="icon hover:text-green-500 hover:cursor-pointer"><i
+                                        class="ri-repeat-line"></i>3k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bookmark-line"></i></div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-share-2-line"></i></div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="post">
+                    <div class="flex">
+                        <div class="img m-4 ">
+                            <img class="w-16 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                                alt="">
+                        </div>
+                        <div class="content my-3">
+                            <span class="font-bold hover:underline text-white">Troll Football</span>
+                            <span class="text-gray-600">@Trollfootball · 6h</span>
+                            <div>- Italy and Germany get the 5th UCL spot
+                                - No English team in UCL and UEL semi-finals
+                                - Olympiacos beats Aston Villa 2-4
+
+                                The real Farmers league</div>
+                            <div class="posting mx-2 ml-0">
+                                <img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GMmksBtW4AA2wRY?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="icons flex justify-between mx-4 my-4 text-sm text-gray-600 ">
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-chat-1-line"></i>1k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-repeat-line"></i>900</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bar-chart-fill"></i></i>2k</div>
+                                <div class="icon hover:text-green-500 hover:cursor-pointer"><i
+                                        class="ri-repeat-line"></i>3k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bookmark-line"></i></div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-share-2-line"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="post">
+                    <div class="flex">
+                        <div class="img m-4 ">
+                            <img class="w-16 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                                alt="">
+                        </div>
+                        <div class="content my-3">
+                            <span class="font-bold hover:underline text-white">James Lucas
+                            </span>
+                            <span class="text-gray-600">@james · 3h</span>
+                            <div>Animals interrupting wildlife photographers - a thread 🧵</div>
+                            <div class="posting mx-2 ml-0">
+                                <img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GMlf--cXsAAQT_B?format=jpg&name=large" alt="">
+                            </div>
+                            <div class="icons flex justify-between mx-4 my-4 text-sm text-gray-600 ">
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-chat-1-line"></i>1k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-repeat-line"></i>900</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bar-chart-fill"></i></i>2k</div>
+                                <div class="icon hover:text-green-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-repeat-line"></i>3k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bookmark-line"></i></div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-share-2-line"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="post">
+                    <div class="flex">
+                        <div class="img m-4 ">
+                            <img class="w-16 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1786321367597559809/w1ZGxC6__400x400.jpg"
+                                alt="">
+                        </div>
+                        <div class="content my-3">
+                            <span class="font-bold hover:underline text-white">Culture Crave 🍿</span>
+                            <span class="text-gray-600">@CultureCrave · 12h</span>
+                            <div>Sam Raimi's 'Spider-Man' was released 22 years ago today</div>
+                            <div class="posting mx-2 ml-0">
+                                <img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GMnzdOWaUAAruat?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="icons flex justify-between mx-4 my-4 text-sm text-gray-600 ">
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-chat-1-line"></i>1k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-repeat-line"></i>900</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bar-chart-fill"></i></i>2k</div>
+                                <div class="icon hover:text-green-500 hover:cursor-pointer"><i
+                                        class="ri-repeat-line"></i>3k</div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-bookmark-line"></i></div>
+                                <div class="icon hover:text-blue-500 hover:cursor-pointer rounded-full p-1"><i
+                                        class="ri-share-2-line"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- this means border size=1px border in x axis is white -->
+        <div class="third w-full hidden md:block">
+
+            <div class="search m-3">
+                <input type="text" placeholder="Search" class="w-1/2 rounded-full  py-2 bg-[#16181c] text-white">
+            </div>
+
+            <div class="whats sticky top-0 m-3 bg-[#16181c] w-1/2 py-5 rounded-xl space-y-3">
+                <h1 class="text-xl font-bold px-3">Whats happening</h1>
+                <div class="item p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="text-sm text-gray-200">Trending in India</div>
+                    <div class="font-bold">#Prk</div>
+                    <div class="text-sm text-gray-200">100.3k Posts</div>
+                </div>
+                <div class="item p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="text-sm text-gray-200">Trending in India</div>
+                    <div class="font-bold">#Missileattack</div>
+                    <div class="text-sm text-gray-200">80.3k Posts</div>
+                </div>
+                <div class="item p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="text-sm text-gray-200">Trending in India</div>
+                    <div class="font-bold">#ShivSena</div>
+                    <div class="text-sm text-gray-200">72.1k Posts</div>
+                </div>
+                <div class="item p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="text-sm text-gray-200">Trending in India</div>
+                    <div class="font-bold">#ShivSena</div>
+                    <div class="text-sm text-gray-200">72.1k Posts</div>
+                </div>
+                
+            </div>
+            <div class="who sticky top-[50vh] m-3 bg-[#16181c] w-1/2 py-5 rounded-xl space-y-1">
+                <h1 class="text-xl font-bold px-3">Who To Follow</h1>
+                <!-- put p1 and p2 in one div and p3 in another div so that by using justify btw propert they both get separated and comes to end -->
+                <div class="item p-3 items-center gap-2 flex justify-between hover:bg-gray-800 cursor-pointer">
+                    <div class="flex gap-3">
+
+                        <div class="p1"><img class="w-12 h-12"
+                                src="https://pbs.twimg.com/profile_images/1774965180784324608/BT-_f00R_x96.jpg"
+                                alt="vercel"></div>
+                        <div class="p2 ">
+                            <div>NBC Sports</div>
+                            <div class="text-gray-500">@Nbcsports</div>
+                        </div>
+                    </div>
+
+                    <div class="p3">
+                        <button class="bg-white text-black px-5 py-2 rounded-full font-bold">Follow</button>
+                    </div>
+
+                </div>
+                <div class="item p-3 items-center gap-2 flex justify-between hover:bg-gray-800 cursor-pointer">
+                    <div class="flex gap-3">
+
+                        <div class="p1"><img class="w-12 h-12"
+                                src="https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_bigger.png"
+                                alt="vercel"></div>
+                        <div class="p2 ">
+                            <div>React</div>
+                            <div class="text-gray-500">@react</div>
+                        </div>
+                    </div>
+
+                    <div class="p3">
+                        <button class="bg-white text-black px-5 py-2 rounded-full font-bold">Follow</button>
+                    </div>
+
+                </div>
+                <div class="item p-3 items-center gap-2 flex justify-between hover:bg-gray-800 cursor-pointer">
+                    <div class="flex gap-3">
+
+                        <div class="p1"><img class="w-12 h-12"
+                                src="https://pbs.twimg.com/profile_images/989513875124117504/UNMIb20k_bigger.jpg"
+                                alt="vercel"></div>
+                        <div class="p2 ">
+                            <div>Shad.js</div>
+                            <div class="text-gray-500">@shad</div>
+                        </div>
+                    </div>
+
+                    <div class="p3">
+                        <button class="bg-white text-black px-5 py-2 rounded-full font-bold">Follow</button>
+                    </div>
+
+                </div>
+                <div class="text-blue-600 px-3 cursor-pointer hover:underline my-5">Show More</div>
+            </div>
+            <div class="terms sticky top-[84vh] text-xs text-gray-500 m-3 w-1/2 py-5 space-y-1 ">
+                <span class="hover:underline cursor-pointer mr-2">Terms of Service</span>
+                <span class="hover:underline cursor-pointer mr-2">Privacy Policy</span>
+                <span class="hover:underline cursor-pointer mr-2">Cookie Policy</span>
+                <span class="hover:underline cursor-pointer mr-2">Accessibility</span>
+                <span class="hover:underline cursor-pointer mr-2">Ads</span>
+                <span class="hover:underline cursor-pointer mr-2">More</span>
+                <span class="hover:underline cursor-pointer mr-2">© 2024 X Corp.</span>
+            </div>
+</body>
+
+</html>
